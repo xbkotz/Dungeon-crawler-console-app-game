@@ -42,13 +42,18 @@ int main(int argc, char * argv[])
 	left = GetAsyncKeyState(VK_D);
 	int back = 0;
 	left = GetAsyncKeyState(VK_S);
+	int down = 0;
+	if (up) position[0] -= 1;
+	else if (right) position[1] += 1;
+	else if (down) position[0] += 1;
+	else if (left) position[1] -= 1;
 
 	if (up)
 	{
 		system("cls"); //clearrs screen and re creates
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
-				if (i == position[0] && j == position[1]+-1) // + goes right - goes left											*/
+				if (i == position[0] && j == position[1]) // + goes right - goes left											*/
 					cout << character;
 				else
 					cout << grid[i][j];
@@ -62,7 +67,7 @@ int main(int argc, char * argv[])
 		system("cls"); //clearrs screen and re creates
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
-				if (i == position[0] && j == position[1] + -1) // + goes right - goes left											*/
+				if (i == position[0] && j == position[1]) // + goes right - goes left											*/
 					cout << character;
 				else
 					cout << grid[i][j];
@@ -75,7 +80,7 @@ int main(int argc, char * argv[])
 		system("cls"); //clearrs screen and re creates
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
-				if (i == position[0] && j == position[1] + -1) // + goes right - goes left											*/
+				if (i == position[0] && j == position[1]) // + goes right - goes left											*/
 					cout << character;
 				else
 					cout << grid[i][j];
@@ -88,7 +93,7 @@ int main(int argc, char * argv[])
 		system("cls"); //clearrs screen and re creates
 		for (int i = 0; i < 5; i++) {
 			for (int j = 0; j < 5; j++) {
-				if (i == position[0] && j == position[1] + -1) // + goes right - goes left											*/
+				if (i == position[0] && j == position[1]) // + goes right - goes left											*/
 					cout << character;
 				else
 					cout << grid[i][j];
